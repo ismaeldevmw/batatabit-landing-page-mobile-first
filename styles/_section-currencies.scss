@@ -1,0 +1,103 @@
+.main-tables-container {
+  display: flex;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-currency-table {
+  scroll-snap-align: center;
+  min-width: 320px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+.main-tables-container::-webkit-scrollbar {
+  background-color: var(--soft-orange);
+  height: 3px;
+}
+.main-tables-container::-webkit-scrollbar-thumb {
+  background-color: var(--bitcoin-orange);
+}
+.main-currency-table .currency-table__title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: #7e4500;
+}
+.main-currency-table .currency-table__title--blue {
+  color: #005797;
+}
+.currency-table__container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+.currency-table__container table {
+  width: 100%;
+  height: 100%;
+}
+.currency-table__container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #5c5b5b;
+  background-color: var(--just-white);
+}
+.currency-table__container .table--top-left {
+  border-radius: 15px 0 0 0;
+}
+.currency-table__container .table--top-right {
+  border-radius: 0 15px 0 0;
+}
+.currency-table__container .table--bottom-right {
+  border-radius: 0 0 15px 0;
+}
+.currency-table__container .table--bottom-left {
+  border-radius: 0 0 0 15px;
+}
+.currency-table__container .table--right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+@mixin currency-table-icon() {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.currency-table__container .down {
+  @include currency-table-icon();
+  background-image: url("../assets/icons/trending-down.svg");
+}
+.currency-table__container .up {
+  @include currency-table-icon();
+  background-image: url("../assets/icons/trending-up.svg");
+}
+.currency-table__date {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+.currency-table__date p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  color: var(--warm-black);
+}
+.currency-table__date--blue {
+  background-color: var(--soft-blue);
+}

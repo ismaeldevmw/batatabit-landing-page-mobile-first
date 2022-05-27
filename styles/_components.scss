@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  padding: 12px 16px;
+  font-size: 1.4rem;
+  font-weight: $font-semi-bold;
+  text-decoration: none;
+  color: var(--warm-black);
+  background-color: var(--off-white);
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 5px;
+  transition: 0.3s;
+}
